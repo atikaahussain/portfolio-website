@@ -1,0 +1,486 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #058dc7);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-box {
+  background: white;
+  font-size: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 650px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.main-box p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-bar {
+  text-align: left;
+  background: #3c3c3c;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: -30px -30px 20px -30px;
+  box-sizing: border-box;
+}
+
+.highlight {
+  color: #fe588d;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a .highlight {
+  color: #fe588d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a .highlight:hover {
+  transform: scale(1.05);
+  color: #f883a8;
+}
+
+.icon-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.main-box .icon-buttons {
+  margin-bottom: 30px;
+}
+
+.icon-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  max-width: 100px;
+  flex: 1 0 70px;
+}
+
+.icon-buttons img {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-buttons span {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.icon-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.close-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.2s ease;
+}
+
+.close-btn:hover img {
+  filter: brightness(0.5);
+}
+
+.close-btn:active {
+  cursor: grabbing;
+}
+
+/* Common floating box styles */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .icon-buttons button {
+    flex: 1 0 40%;
+  }
+  .nav-bar {
+    font-size: 14px;
+  }
+}
+
+/* ABOUT SECTION BELOW */
+.about-box {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  width: 90vw;
+  max-width: 650px;
+  height: 80vh;
+  border: 2px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+
+.about-top {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+ padding: 50px 10px 10px 10px;
+  border-bottom: 2px solid #333;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.about-box .box-content {
+  background-color: white;
+  overflow-y: auto;
+  padding: 12px;
+  flex-grow: 1;
+}
+
+.about-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+
+.about-text p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-content {
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 20px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.about-content li {
+  text-align: left;
+}
+
+.about-content button{
+  font-size: 10px;
+}
+.about-edu h1 {
+  padding-top: 5px;
+  text-align: left;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.about-edu {
+  padding-left: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 10px;
+}
+
+.about-edu p {
+  text-align: left;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-int {
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 20px;
+  padding-top: 20px;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.about-int h1 {
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  .about-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5rem 1rem 1rem 1rem;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.boxes-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.navtitle {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* LINK, PROJECT, CONTACT boxes */
+.linkbox, .contactbox {
+  padding: 30px;
+  text-align: center;
+  z-index: 100;
+  animation: fadeIn 0.4s ease;
+  box-sizing: border-box;
+  background-color: white;
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  border: 2px solid #444;
+  border-radius: 12px;
+  overflow: auto;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* LINK section */
+.linkbox .icon-buttons {
+  gap: 15px;
+  margin-top: 40px;
+  margin-bottom: -20px;
+}
+
+.linkbox .icon-buttons p {
+  display: flex;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  border: 1px solid #e98fac;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* CONTACT section */
+.contact-content {
+  margin-top: 30px;
+}
+
+.contactbox {
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 600px;
+  max-height: 800px;
+}
+
+.cont-header h1 {
+  font-family: sans-serif;
+  padding: 5px;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.cont-header p {
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 0px;
+}
+
+.cont-footer {
+  padding-bottom: 20px;
+}
+
+.cont-footer p {
+  font-size: 18px;
+  text-align: center;
+  margin: 1px;
+}
+
+.contimg img {
+  padding-bottom: 20px;
+  width: 250px;
+  height: 180px;
+}
+
+.cont-btn {
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #fe588d;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cont-btn:hover {
+  background-color: white;
+  color: #fe588d;
+  transform: scale(1.05);
+}
+
+/* footer */
+.bottom {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 10px 0px 0px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom .socials a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+.bottom h3 {
+  font-size: 15px;
+  color: white;
+}
+
+.bottom .socials a:hover {
+  color: #2a2929;
+}
+
+/* PROJECT section */
+.project-box {
+  position: relative;
+  background-color: white;
+  width: 90vw;
+  max-width: 900px;
+  height: 70vh;
+  border: 2px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.4s ease;
+}
+.project-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+/* GRID layout for project cards */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive 3-column */
+  gap: 20px;
+  padding: 30px 10px 0px 10px;
+}
+
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f1b2e;
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 2px 5px 10px rgba(16, 14, 14, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.proj-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.folder-icon,
+.external-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #00f2c3; /* example color */
+  border-radius: 3px;
+}
+
+.proj-title {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.proj-text {
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 15px;
+}
+
+.proj-tech {
+  font-size: 13px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ccc;
+}
